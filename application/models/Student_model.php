@@ -6,7 +6,7 @@ class Student_model extends CI_Model
 {
     public function create_student($school_id,$student_first_name,$student_last_name)
     {
-        $site1=$this->load->database("kcse_results_site1",TRUE);
+        $site1=$this->load->database("site1",TRUE);
         $data=array(
             "school_id"=>$school_id,
             "student_first_name"=>$student_first_name,
@@ -17,7 +17,7 @@ class Student_model extends CI_Model
     public function update_student($student_id,$school_id,$student_first_name,$student_last_name)
     {
 
-        $site1=$this->load->database("kcse_results_site1",TRUE);
+        $site1=$this->load->database("site1",TRUE);
         $data=array(
             "school_id"=>$school_id,
             "student_first_name"=>$student_first_name,
@@ -29,7 +29,7 @@ class Student_model extends CI_Model
     public function delete_student($student_id)
     {
 
-        $site1=$this->load->database("kcse_results_site1",TRUE);
+        $site1=$this->load->database("site1",TRUE);
 
         $site1->where("student_id",$student_id);
         $site1->delete("students");
@@ -37,6 +37,12 @@ class Student_model extends CI_Model
     }
 
 
+    public function get_all_students()
+    {
+        $site1=$this->load->database("site1",TRUE);
+        $result=$site1->get("students");
+        return $result->result();
+    }
 
 
 
