@@ -87,29 +87,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <thead>
                     <tr>
                         <th>
-                            Student name
+                            County name
                         </th>
                         <th>
-                            School
+                            County ID
                         </th>
-                        <th>
-                            County
-
-                        </th>
+                        
                     </tr>
                     </thead>
                     <tbody>
                     <?php
-                    if(!empty($students))
+                    if(!empty($counties))
                     {
-                        foreach($students as $student){
+                        foreach($counties as $county){
 
                             ?>
 
                             <tr>
-                                <td><?php echo($student->student_first_name." ".$student->student_last_name); ?></td>
-                                <td><?php echo($student->school_id); ?></td>
-                                <td><?php echo($student->student_id); ?></td>
+                                <td><?php echo($county->county_name); ?></td>
+                                <td><?php echo($county->county_id); ?></td>
                             </tr>
 
                         <?php
@@ -126,6 +122,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     </tbody>
                 </table>
+            </div>
+            <div class="col-md-6">
+
+                <form method="post" action="<?php echo(base_url("counties/create_county")); ?>" >
+                    <div class="input-group">
+                       <label for="county_name">
+                           County Name
+                       </label></br>
+                        <input class="input" type="text" id="county_name" name="county_name" required >
+                        </br>
+                        <button type="submit">Add County</button>
+                    </div>
+                </form>
             </div>
 		</div>
 
