@@ -8,6 +8,7 @@ class Student_model extends CI_Model
     {
         $site1=$this->load->database("site1",TRUE);
         $data=array(
+            "student_id"=>UUIDv4(),
             "school_id"=>$school_id,
             "student_first_name"=>$student_first_name,
             "student_last_name"=>$student_last_name

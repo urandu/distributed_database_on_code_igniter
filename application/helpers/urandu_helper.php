@@ -36,3 +36,13 @@ function get_all_counties()
     return $counties;
 }
 
+
+function get_all_schools()
+{
+    $CI=get_instance();
+    $CI->load->model("school_model");
+    $schools=$CI->school_model->get_all_schools();
+
+    return $schools;
+}
+
