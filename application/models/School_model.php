@@ -37,9 +37,18 @@ class School_model extends CI_Model
         {
             $site1_result=$site1_result->result();
         }
+        else
+        {
+            $site1_result=array();
+        }
         if($site2_result->num_rows()>0)
         {
             $site2_result=$site2_result->result();
+        }
+        else
+        {
+
+            $site2_result=array();
         }
 
         $result=array_merge($site1_result,$site2_result);

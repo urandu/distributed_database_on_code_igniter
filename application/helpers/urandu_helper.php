@@ -26,3 +26,13 @@ function UUIDv4() {
 
 
 
+
+function get_all_counties()
+{
+    $CI=get_instance();
+    $CI->load->model("county_model");
+    $counties=$CI->county_model->get_all_counties();
+
+    return $counties;
+}
+

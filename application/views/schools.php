@@ -78,7 +78,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>All Counties</h1>
+	<h1>All Schools</h1>
 
 	<div id="body" class="container">
 		<div class="row">
@@ -87,10 +87,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <thead>
                     <tr>
                         <th>
-                            County name
+                            School name
                         </th>
                         <th>
-                            County ID
+                            School ID
                         </th>
                         <th>
                             Action
@@ -100,15 +100,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </thead>
                     <tbody>
                     <?php
-                    if(!empty($counties))
+                    if(!empty($schools))
                     {
-                        foreach($counties as $county){
+                        foreach($schools as $school){
 
                             ?>
 
                             <tr>
-                                <td><?php echo($county->county_name); ?></td>
-                                <td><?php echo($county->county_id); ?></td>
+                                <td><?php echo($school->school_name); ?></td>
+                                <td><?php echo($school->school_id); ?></td>
                                 <td>
                             </tr>
 
@@ -129,14 +129,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="col-md-6">
 
-                <form method="post" action="<?php echo(base_url("counties/create_county")); ?>" >
+                <form method="post" action="<?php echo(base_url("schools/create_school")); ?>" >
                     <div class="input-group">
-                       <label for="county_name">
-                           County Name
-                       </label></br>
-                        <input class="input" type="text" id="county_name" name="county_name" required >
+                       <label for="county_id">
+                           County
+                       </label>
                         </br>
-                        <button type="submit">Add County</button>
+
+
+                        <select name="county_id" id="county_id">
+
+                            <?php
+
+                            $counties=get_all_counties();
+
+                            foreach($counties as $county)
+                            {
+                                ?>
+
+                                <option value="<?php echo($county->county_id); ?>"><?php echo($county->county_name); ?></option>
+
+                            <?php
+                            }
+
+
+                            ?>
+
+
+                        </select>
+
+
+                        </br>
+                        <label for="school_name">
+                           School Name
+                       </label></br>
+                        <input class="input" type="text" id="school_name" name="school_name" required >
+                        </br>
+                        <button type="submit">Add School</button>
                     </div>
                 </form>
             </div>
