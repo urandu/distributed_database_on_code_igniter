@@ -117,6 +117,62 @@ $db['site1'] = array(
 	'save_queries' => TRUE
 );
 
+
+
+
+
+/*
+
+$db['site1'] = array(
+	'dsn'	=> '',
+	'hostname' => ''sqlite:'.APPPATH.'config/sqlite/sqlite.db',
+	'username' => '',
+	'password' => '',
+	'database' => '',
+	'dbdriver' => 'pdo',
+	'dbprefix' => '',
+	'pconnect' => TRUE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
+
+
+
+
+*/
+
+/*
+$db['site1'] = array(
+    'dsn'	=> '',
+    'hostname' => 'sqlite:'.APPPATH.'config/sqlite/sqlite.db',
+	'username' => '',
+	'password' => '',
+	'database' => '',
+	'dbdriver' => 'pdo',
+	'dbprefix' => '',
+	'pconnect' => TRUE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);*/
+
 $db['site2'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
@@ -141,6 +197,28 @@ $db['site2'] = array(
 
 $db['site3'] = array(
 	'dsn'	=> '',
+	'hostname' => 'pgsql:host=192.168.43.226;dbname=kcse_results_site3.db',
+	'username' => 'postgres',
+	'password' => 'mephibosheth.',
+	'database' => 'kcse_results_site3',
+	'dbdriver' => 'pdo',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
+/*
+$db['site3'] = array(
+	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => 'in',
@@ -159,4 +237,4 @@ $db['site3'] = array(
 	'stricton' => FALSE,
 	'failover' => array(),
 	'save_queries' => TRUE
-);
+);*/

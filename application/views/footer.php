@@ -1,27 +1,4 @@
 
-<!-- About Section -->
-<section class="success" id="about">
-    <div class="container">
-
-        <div class="row">
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div>
-    </div>
-</section>
-
-
 <!-- Footer -->
 <footer class="text-center">
     <div class="footer-above">
