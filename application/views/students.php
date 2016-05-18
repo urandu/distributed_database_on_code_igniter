@@ -108,8 +108,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                             <tr>
                                 <td><a href="<?php echo(base_url("results?student_id=".$student->student_id)); ?>"><?php echo($student->student_first_name." ".$student->student_last_name); ?></a></td>
-                                <td><?php echo($student->school_id); ?></td>
-                                <td><?php echo($student->student_id); ?></td>
+                                <td><?php echo(get_school($student->school_id)->school_name); ?></td>
+                                <td><?php echo(get_county(get_school($student->school_id)->school_county_id)->county_name); ?></td>
                             </tr>
 
                         <?php

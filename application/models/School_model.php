@@ -56,6 +56,37 @@ class School_model extends CI_Model
         return $result;
     }
 
+    public function get_school($school_id)
+    {
+        $site1=$this->load->database("site1",TRUE);
+        $site2=$this->load->database("site2",TRUE);
+        $site1->where("school_id",$school_id);
+        $site2->where("school_id",$school_id);
+        $site1_result=$site1->get("school");
+        $site2_result=$site2->get("school");
+        if($site1_result->num_rows()>0)
+        {
+            $site1_result=$site1_result->result();
+        }
+        else
+        {
+            $site1_result=array();
+        }
+        if($site2_result->num_rows()>0)
+        {
+            $site2_result=$site2_result->result();
+        }
+        else
+        {
+
+            $site2_result=array();
+        }
+
+        $result=array_merge($site1_result,$site2_result);
+
+        return $result;
+    }
+
     public function update_school($county_id,$school_id,$school_name)
     {
 

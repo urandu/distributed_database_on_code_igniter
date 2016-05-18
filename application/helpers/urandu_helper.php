@@ -46,3 +46,31 @@ function get_all_schools()
     return $schools;
 }
 
+function get_school($school_id)
+{
+    $CI=get_instance();
+    $CI->load->model("school_model");
+    $school=$CI->school_model->get_school($school_id);
+
+    return $school[0];
+}
+
+function get_county($county_id)
+{
+    $CI=get_instance();
+    $CI->load->model("county_model");
+    $county=$CI->county_model->get_county($county_id);
+
+    return $county[0];
+}
+
+
+function get_student($student_id)
+{
+    $CI=get_instance();
+    $CI->load->model("student_model");
+    $student=$CI->student_model->get_student($student_id);
+
+    return $student[0];
+}
+

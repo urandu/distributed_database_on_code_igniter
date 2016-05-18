@@ -115,10 +115,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             Chemistry
                         </th>
 
-                        <th>
-                            County
 
-                        </th>
                     </tr>
                     </thead>
                     <tbody>
@@ -131,7 +128,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             ?>
 
                             <tr>
-                                <td><?php echo($result["student_id"]); ?></td>
+                                <td><?php echo(get_student($result["student_id"])->student_first_name." ".get_student($result["student_id"])->student_last_name); ?></td>
                                 <td><?php echo($result["mathematics"]); ?></td>
                                 <td><?php echo($result["english"]); ?></td>
                                 <td><?php echo($result["kiswahili"]); ?></td>

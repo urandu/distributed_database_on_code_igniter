@@ -38,6 +38,14 @@ class County_model extends CI_Model
         return $result->result();
     }
 
+    public function get_county($county_id)
+    {
+        $site1=$this->load->database("site3",TRUE);
+        $site1->where("county_id",$county_id);
+        $result=$site1->get("counties");
+        return $result->result();
+    }
+
      public function delete_county($county_id)
     {
 
