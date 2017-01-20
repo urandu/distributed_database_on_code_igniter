@@ -18,12 +18,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | to $_SERVER['SERVER_ADDR'] if available, or localhost otherwise.
 | The auto-detection mechanism exists only for convenience during
 | development and MUST NOT be used in production!
-|    
+|
 | If you need to allow multiple domains, remember that this file is still
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/distributed_db/';
+$config['base_url'] = 'http://127.0.0.1/distributed_db/';
 
 /*
 |--------------------------------------------------------------------------
